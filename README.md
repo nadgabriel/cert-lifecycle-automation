@@ -1,33 +1,40 @@
-cert-lifecycle-automation
+# Cert Lifecycle Automation
 
-.gitignore
-.editorconfig
-.pre-commit-config.yaml
-README.md
-LICENSE
-requirements.txt
-Dockerfile
-docker-compose.yml
-.gitlab-ci.yml
-Makefile
+Automation toolkit for TLS certificate validation and renewal.
 
-scripts
+## Features
+
+- Certificate expiration check (Bash + OpenSSL)
+- Automated renewal logic (Python)
+- CI/CD integration ready
+- Container-friendly design
+
+## Project Structure
+
+scripts/
     check_cert.sh
     renew_cert.py
-    utils.py
 
-config
-    domains.yaml
-    settings.yaml
+## Usage
 
-tests
-    __init__.py
-    test_check_cert.py
-    test_renew_cert.py
+Check certificate:
 
-logs
-    .gitkeep
+    ./scripts/check_cert.sh example.com
 
-docs
-    architecture.md
-    runbook.md
+Renew certificate:
+
+    python3 scripts/renew_cert.py
+
+## Requirements
+
+- Python 3.11+
+- OpenSSL
+- certbot (optional)
+
+## CI/CD
+
+Designed for GitLab CI or GitHub Actions pipeline integration.
+
+## Author
+
+Gabriel – DevOps & Network Automation
